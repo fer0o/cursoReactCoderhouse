@@ -6,7 +6,9 @@ const Navbar = () => {
           className='w-14 h-14  '
           src={'http://cdn.onlinewebfonts.com/svg/img_571584.png'}
         />
-        <a className='btn btn-ghost normal-case text-xl'>Mundialito</a>
+        <a className='btn btn-ghost normal-case text-xl font-bold'>
+          Mundialito
+        </a>
       </div>
       <div className='flex-none'>
         <ul className='menu menu-horizontal p-0'>
