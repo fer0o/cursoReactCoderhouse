@@ -1,10 +1,12 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import Saludo from './components/Saludo'
 
 function App () {
   return (
     <div>
       <Navbar />
+      <Saludo />
     </div>
     // <div className='App'>
     //   <header className='App-header'>
