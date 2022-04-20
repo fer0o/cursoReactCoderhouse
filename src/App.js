@@ -1,4 +1,5 @@
 import './App.css'
+import Card from './components/Card'
 import Navbar from './components/Navbar'
 import Saludo from './components/Saludo'
 
@@ -6,7 +7,12 @@ function App () {
   return (
     <div>
       <Navbar />
-      <Saludo />
+      <Saludo name='fer' apellido='medellin' edad='29' />
+      <Saludo name='pame' apellido='beltran' edad='26' />
+      <Saludo name='juancho' apellido='abdul' edad='19' />
+      <Card>
+        <Saludo name='pame' apellido='beltran' edad='26' />
+      </Card>
     </div>
     // <div className='App'>
     //   <header className='App-header'>
