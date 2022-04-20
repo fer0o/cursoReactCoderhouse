@@ -1,3 +1,5 @@
+import CartWidget from './CartWidget'
+
 const Navbar = () => {
   return (
     <div className='navbar bg-emerald-700'>
@@ -33,6 +35,7 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        <CartWidget />
       </div>
     </div>
   )
