@@ -1,5 +1,6 @@
 import './App.css'
 import CartWidget from './components/CartWidget'
+import ItemListContainer from './components/ItemListContainer'
 import Navbar from './components/Navbar'
 import Saludo from './components/Saludo'
 
@@ -7,6 +8,8 @@ function App () {
   return (
     <div>
       <Navbar />
+      <Saludo name='fer' apellido='medellin' edad='29' />
+      <ItemListContainer />
     </div>
     // <div className='App'>
     //   <header className='App-header'>
