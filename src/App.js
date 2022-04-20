@@ -1,5 +1,4 @@
 import './App.css'
-import Card from './components/Card'
 import CartWidget from './components/CartWidget'
 import Navbar from './components/Navbar'
 import Saludo from './components/Saludo'
