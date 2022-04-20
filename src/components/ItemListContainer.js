@@ -1,5 +1,9 @@
 const ItemListContainer = () => {
-  return <div>ItemListContainer</div>
+  return (
+    <div>
+      <h1 className='text-6xl'>Esto es un ItemListContainer</h1>
+    </div>
+  )
 }
 
 export default ItemListContainer
