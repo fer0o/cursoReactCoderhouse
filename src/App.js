@@ -1,15 +1,19 @@
 import './App.css'
 import CartWidget from './components/CartWidget'
+import ItemCount from './components/ItemCount'
 import ItemListContainer from './components/ItemListContainer'
 import Navbar from './components/Navbar'
+import NewCard from './components/NewCard'
 import Saludo from './components/Saludo'
 
 function App () {
   return (
     <div>
       <Navbar />
-      <Saludo name='fer' apellido='medellin' edad='29' />
-      <ItemListContainer />
+      {/* <Saludo name='fer' apellido='medellin' edad='29' />
+      <ItemListContainer /> */}
+      <NewCard otroComponente={Saludo}></NewCard>
+      <ItemCount></ItemCount>
     </div>
     // <div className='App'>
     //   <header className='App-header'>
