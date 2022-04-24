@@ -13,7 +13,7 @@ function App () {
       {/* <Saludo name='fer' apellido='medellin' edad='29' />
       <ItemListContainer /> */}
       <NewCard otroComponente={Saludo}></NewCard>
-      <ItemCount></ItemCount>
+      <ItemCount initial ='0' stock='5' />
     </div>
     // <div className='App'>
     //   <header className='App-header'>
