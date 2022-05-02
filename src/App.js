@@ -1,7 +1,7 @@
 import './App.css'
 // import CartWidget from './components/CartWidget'
 import EquiposContainer from './components/equipos/EquiposContainer'
-import ItemCount from './components/ItemCount'
+// import ItemCount from './components/ItemCount'
 // import ItemListContainer from './components/ItemListContainer'
 import Navbar from './components/Navbar'
 // import NewCard from './components/NewCard'
@@ -17,9 +17,9 @@ function App () {
       {/* <Saludo name='fer' apellido='medellin' edad='29' />
       <ItemListContainer /> */}
       {/* <NewCard otroComponente={Saludo}></NewCard> */}
-      <div className='pb-10'>
+      {/* <div className='pb-10'>
         <ItemCount onAdd={onAdd} initial={0} stock={5} />
-      </div>
+      </div> */}
       <div>
         <EquiposContainer />
       </div>
