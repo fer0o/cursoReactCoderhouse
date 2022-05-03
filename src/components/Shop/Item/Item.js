@@ -5,7 +5,7 @@ const Item = ({ nombre, precio, img, marca, id }) => {
   return (
     <div>
       <div>
-        <h4>precio: {precio}</h4>
+        <h4>precio: {precio} MXN</h4>
         <h4>Jersey país: {nombre} 2022</h4>
         <h4>Marca: {marca}</h4>
         <div>
