@@ -20,9 +20,9 @@ function App () {
       {/* <div className='pb-10'>
         <ItemCount onAdd={onAdd} initial={0} stock={5} />
       </div> */}
-      <div>
+      {/* <div>
         <EquiposContainer />
-      </div>
+      </div> */}
     </div>
   )
 }
