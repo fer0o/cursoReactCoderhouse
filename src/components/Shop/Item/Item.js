@@ -5,13 +5,14 @@ const Item = ({ nombre, precio, img, marca, id }) => {
   return (
     <div>
       <div>
-        <h4>{precio}</h4>
-        <h4>{nombre}</h4>
-        <h4>{marca}</h4>
+        <h4>precio: {precio}</h4>
+        <h4>Jersey país: {nombre} 2022</h4>
+        <h4>Marca: {marca}</h4>
+        <div>
+          <img src={img} className='w-[200px] h-[200px]' />
+        </div>
       </div>
-      <div>
-        <img src={img} className='w-[200px] h-[200px]' />
-      </div>
+
       <div>
         <Link to={`/item/${id}`}>Ver Mas</Link>
       </div>
