@@ -1,6 +1,6 @@
 export const productos = [
   {
-    id: '1',
+    id: '0',
     nombre: 'Qatar',
     continente: 'Asia',
     jersey:
@@ -11,7 +11,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '2',
+    id: '1',
     nombre: 'Ecuador',
     continente: 'America',
     jersey:
@@ -22,7 +22,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '3',
+    id: '2',
     nombre: 'Senegal',
     continente: 'Africa',
     jersey:
@@ -33,7 +33,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '4',
+    id: '3',
     nombre: 'Paises Bajos',
     continente: 'Europa',
     jersey:
@@ -44,7 +44,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '5',
+    id: '4',
     nombre: 'Inglaterra',
     continente: 'Europa',
     jersey:
@@ -55,7 +55,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '6',
+    id: '5',
     nombre: 'Iran',
     continente: 'Asia',
     jersey: 'https://i.imgur.com/A2yWkUp.jpg',
@@ -65,7 +65,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '7',
+    id: '6',
     nombre: 'Estados Unidos',
     continente: 'America',
     jersey: 'https://footsoccerpro.co/wp-content/uploads/2020/03/USA-1.png',
@@ -75,7 +75,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '8',
+    id: '7',
     nombre: 'Repechaje-A',
     continente: 'Repechaje-A',
     jersey:
@@ -86,7 +86,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '9',
+    id: '8',
     nombre: 'Agentina',
     continente: 'America',
     jersey:
@@ -97,7 +97,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '10',
+    id: '9',
     nombre: 'Arabia Saudita',
     continente: 'Asia',
     jersey: 'https://cdn.footballkitarchive.com/2021/07/23/5EpkfF0GRQwsGxc.jpg',
@@ -107,18 +107,18 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '11',
+    id: '10',
     nombre: 'Mexico',
     continente: 'America',
     jersey:
-      'http://cxloft.com/image/cache/data/National%20Team/mexico-home-jersey-leak-soccer-match-mens-first-sportswear-football-tops-sport-shirt-2022-600x800.jpg',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBykD1NzajuqSJB8FueKR9nWj9jSOvuk-KhiDBEPWlVQqc5ist0HPKpQNbudTvfp-WEyDh9QVCFeK93crwULlRatss82JoMRbNanWj0HQ6Ah-HH1Fmr2LmoAAmYYqe1pck6DAOcs5FfDYCUKu55LTFrdKhAxHBpC1bClrao0eUa29-xIiim0VzV3ToOA/s1600/Mexico%202022%20Home%20Kit%20%283%29.jpg',
     marca: 'Adidas',
     precio: 1000,
     stock: 10,
     category: 'hombre'
   },
   {
-    id: '12',
+    id: '11',
     nombre: 'Polonia',
     continente: 'Europa',
     jersey:
@@ -129,7 +129,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '13',
+    id: '12',
     nombre: 'Francia',
     continente: 'Europa',
     jersey:
@@ -140,7 +140,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '14',
+    id: '13',
     nombre: 'Repechaje-B',
     continente: 'Repechaje-B',
     jersey:
@@ -151,7 +151,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '15',
+    id: '14',
     nombre: 'Dinamarca',
     continente: 'Europa',
     jersey:
@@ -162,7 +162,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '16',
+    id: '15',
     nombre: 'Tunez',
     continente: 'Africa',
     jersey:
@@ -173,7 +173,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '17',
+    id: '16',
     nombre: 'España',
     continente: 'Europa',
     jersey:
@@ -184,7 +184,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '18',
+    id: '17',
     nombre: 'Repechaje-C',
     continente: 'Repechaje-C',
     jersey:
@@ -195,7 +195,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '19',
+    id: '18',
     nombre: 'Alemania',
     continente: 'Europa',
     jersey:
@@ -206,7 +206,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '20',
+    id: '19',
     nombre: 'Japon',
     continente: 'Asia',
     jersey: 'https://cf.shopee.sg/file/7bc401e4ff1b3d45d958f17557c5bf86',
@@ -216,7 +216,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '21',
+    id: '20',
     nombre: 'Belgica',
     continente: 'Europa',
     jersey:
@@ -227,7 +227,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '22',
+    id: '21',
     nombre: 'Canada',
     continente: 'America',
     jersey: 'https://cf.shopee.com.mx/file/e7cf4fb5be6c9108b997ec13a322178a',
@@ -237,7 +237,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '23',
+    id: '22',
     nombre: 'Marruecos',
     continente: 'Africa',
     jersey:
@@ -248,7 +248,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '24',
+    id: '23',
     nombre: 'Croacia',
     continente: 'Europa',
     jersey:
@@ -259,7 +259,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '25',
+    id: '24',
     nombre: 'Brasil',
     continente: 'America',
     jersey:
@@ -270,7 +270,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '26',
+    id: '25',
     nombre: 'Serbia',
     continente: 'Europa',
     jersey:
@@ -281,7 +281,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '27',
+    id: '26',
     nombre: 'Suiza',
     continente: 'Europa',
     jersey:
@@ -292,7 +292,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '28',
+    id: '27',
     nombre: 'Camerun',
     continente: 'Africa',
     jersey:
@@ -303,7 +303,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '29',
+    id: '28',
     nombre: 'Portugal',
     continente: 'Europa',
     jersey:
@@ -314,7 +314,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '30',
+    id: '29',
     nombre: 'Ghana',
     continente: 'Africa',
     jersey:
@@ -325,7 +325,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '31',
+    id: '30',
     nombre: 'Uruguay',
     continente: 'America',
     jersey:
@@ -336,7 +336,7 @@ export const productos = [
     category: 'hombre'
   },
   {
-    id: '32',
+    id: '31',
     nombre: 'Corea del Sur',
     continente: 'Asia',
     jersey: 'https://i.ebayimg.com/images/g/Z8YAAOSwej1fxvQQ/s-l1600.jpg',
