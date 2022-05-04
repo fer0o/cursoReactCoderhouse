@@ -10,7 +10,7 @@ const ItemDetail = ({ product }) => {
           <h4>{product.marca}</h4>
           <h4>{product.precio}</h4>
         </div>
-        <img src={product.jersey} />
+        <img className='w-52 h-52 p-4' src={product.jersey} />
         <div>
           <ItemCount product={product} initial={1} />
         </div>
