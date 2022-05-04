@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div className='navbar bg-emerald-700'>
-      <div className='flex-1'>
+      <div className='flex flex-1'>
         <img
           className='w-14 h-14  '
           src={'http://cdn.onlinewebfonts.com/svg/img_571584.png'}
