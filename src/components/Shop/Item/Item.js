@@ -6,7 +6,7 @@ const Item = ({ nombre, precio, img, marca, id }) => {
     <div>
       <div className=' container grid grid-cols-2 gap-2 mx-auto border-2 m-4  '>
         <div className='flex justify-center'>
-          <img src={img} className='w-52 h-52 p-4 ' />
+          <img src={img} className='w-56 h-56 p-4 ' />
         </div>
         <div className=' m-4'>
           <h4>Jersey país: {nombre} 2022</h4>
