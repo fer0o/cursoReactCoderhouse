@@ -4,7 +4,7 @@ import Item from '../../Item/Item'
 const ItemList = ({ category }) => {
   console.log(category)
   return (
-    <div>
+    <div className='grid container mx-auto grid-cols-3 gap-4 p-4'>
       {category &&
         category.map(product => (
           <Item
