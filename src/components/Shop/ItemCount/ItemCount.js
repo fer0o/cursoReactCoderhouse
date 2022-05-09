@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({ initial, product }) => {
-  const [cantidad, setCantidad] = useState(initial)
+const ItemCount = ({ stock, onAdd }) => {
+  const [cantidad, setCantidad] = useState(0)
 
   const addProduct = () => {
-    if (cantidad < product.stock) {
+    if (cantidad < stock) {
       setCantidad(cantidad + 1)
     }
   }
   const resProduct = () => {
-    if (cantidad > initial) {
+    if (cantidad > 0) {
       setCantidad(cantidad - 1)
     }
   }
@@ -25,9 +25,7 @@ const ItemCount = ({ initial, product }) => {
       <div>
         <button
           className='bg-blue-500 text-white font-bold py-2 px-4 border border-blue-700 rounded w-[300px]'
-          onClick={() =>
-            alert(`Agregaste ${cantidad} ${product.nombre} al carrito`)
-          }
+          onClick={() => onAdd(cantidad)}
         >
           Agregar al Carrito
         </button>
