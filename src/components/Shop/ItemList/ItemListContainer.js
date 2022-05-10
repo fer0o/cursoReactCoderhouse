@@ -4,8 +4,9 @@ import { getItem } from '../../../data/equiposData'
 import ItemList from './ItemList/ItemList'
 
 const ItemListContainer = () => {
-  const { categoryId } = useParams()
   const [category, setCategory] = useState()
+  const { categoryId } = useParams()
+
   useEffect(() => {
     if (categoryId === undefined) {
       getItem().then(response => setCategory(response))
