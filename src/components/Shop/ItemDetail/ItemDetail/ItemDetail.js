@@ -21,10 +21,16 @@ const ItemDetail = ({ product }) => {
           <img className='w-full h-auto p-8' src={jersey} />
         </div>
         <div className='flex flex-col justify-center p-16 border-2'>
-          <h2>Jersey equipo: {nombre}</h2>
-          <h4>Modelo: 2022</h4>
-          <h4>Marca del Jersey: {marca}</h4>
-          <h4 className='font-bold mb-8'>
+          <h2 className='text-xl p-2'>
+            Jersey equipo: <b>{nombre}</b>
+          </h2>
+          <h4 className='text-xl p-2'>
+            Modelo: <b>2022</b>
+          </h4>
+          <h4 className='text-xl p-2'>
+            Marca del Jersey: <b>{marca}</b>
+          </h4>
+          <h4 className=' text-xl font-bold mb-8 p-2'>
             precio:<b> ${precio}</b> MXN
           </h4>
           {terminar ? (
