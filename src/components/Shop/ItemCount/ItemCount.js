@@ -16,10 +16,28 @@ const ItemCount = ({ stock, onAdd }) => {
 
   return (
     <div>
-      <div>
-        <button onClick={resProduct}>-</button>
-        <label>{cantidad}</label>
-        <button onClick={addProduct}>+</button>
+      <div className='flex justify-center border-2 w-60 ml-8'>
+        <span>
+          stock:
+          <label className='font-bold m-2'>{stock}</label>
+        </span>
+      </div>
+      <div className='grid grid-cols-3 m-8 border-2'>
+        <button
+          className='flex justify-start text-2xl font-bold'
+          onClick={resProduct}
+        >
+          -
+        </button>
+        <label className='flex justify-center text-2xl font-bold'>
+          {cantidad}
+        </label>
+        <button
+          className='flex justify-end text-2xl font-bold'
+          onClick={addProduct}
+        >
+          +
+        </button>
       </div>
 
       <div>
