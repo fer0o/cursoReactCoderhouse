@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import AppContextProvider from './components/context/AppContext'
+import CartContextProvider from './components/context/CartContext'
 
 import Navbar from './components/NavBar/Navbar'
 import ItemDetailContainer from './components/Shop/ItemDetail/ItemDetailContainer'
@@ -17,14 +19,21 @@ function App () {
   // }
   return (
     <div>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<ItemListContainer />} />
-          <Route path='/category/:categoryId' element={<ItemListContainer />} />
-          <Route path='/item/:id' element={<ItemDetailContainer />} />
-        </Routes>
-      </BrowserRouter>
+      <AppContextProvider>
+        <CartContextProvider>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<ItemListContainer />} />
+              <Route
+                path='/category/:categoryId'
+                element={<ItemListContainer />}
+              />
+              <Route path='/item/:id' element={<ItemDetailContainer />} />
+            </Routes>
+          </BrowserRouter>
+        </CartContextProvider>
+      </AppContextProvider>
     </div>
   )
 }

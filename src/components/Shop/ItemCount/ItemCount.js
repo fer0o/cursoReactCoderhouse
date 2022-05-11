@@ -1,17 +1,31 @@
 import React, { useState } from 'react'
+import { useAppContext } from '../../context/AppContext'
+import { useCartContext } from '../../context/CartContext'
 
-const ItemCount = ({ stock, onAdd }) => {
-  const [cantidad, setCantidad] = useState(0)
+const ItemCount = ({ stock, onAdd, id }) => {
+  const [count, setCount] = useState(0)
+
+  const { addToCart } = useCartContext()
+  const { products } = useAppContext()
 
   const addProduct = () => {
-    if (cantidad < stock) {
-      setCantidad(cantidad + 1)
+    if (count < stock) {
+      setCount(count + 1)
     }
   }
   const resProduct = () => {
-    if (cantidad > 0) {
-      setCantidad(cantidad - 1)
+    if (count > 0) {
+      setCount(count - 1)
     }
+  }
+  const handdleClick = (id, cantidad) => {
+    const findProduct = products.find(producto => producto.id === id)
+    if (!findProduct) {
+      alert('Error en la base de datos')
+      return
+    }
+    addToCart(findProduct, cantidad)
+    onAdd(count)
   }
 
   return (
@@ -30,7 +44,7 @@ const ItemCount = ({ stock, onAdd }) => {
           -
         </button>
         <label className='flex justify-center text-2xl font-bold'>
-          {cantidad}
+          {count}
         </label>
         <button
           className='flex justify-end text-2xl font-bold'
@@ -43,7 +57,7 @@ const ItemCount = ({ stock, onAdd }) => {
       <div>
         <button
           className='bg-blue-500 text-white font-bold py-2 px-4 border border-blue-700 rounded w-[300px]'
-          onClick={() => onAdd(cantidad)}
+          onClick={() => handdleClick(id, count)}
         >
           Agregar al Carrito
         </button>

@@ -38,7 +38,7 @@ const Navbar = () => {
           </li> */}
         </ul>
         {/* comentado por ahora que no es responsive */}
-        {/* <CartWidget /> */}
+        <CartWidget />
       </div>
     </div>
   )

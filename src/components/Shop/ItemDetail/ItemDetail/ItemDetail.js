@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import ItemCount from '../../ItemCount/ItemCount'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({ product }) => {
-  const { jersey, nombre, marca, precio, stock } = product
+  const { jersey, nombre, marca, precio, stock, id } = product
   // estado interno que cambie el estado
   const [terminar, setTerminar] = useState(false)
   // agregar el contador
@@ -34,12 +35,18 @@ const ItemDetail = ({ product }) => {
             precio:<b> ${precio}</b> MXN
           </h4>
           {terminar ? (
-            <button className='bg-blue-500 text-white font-bold py-2 px-4 border border-blue-700 rounded w-[300px]'>
+            <Link
+              to='/cart'
+              className='bg-blue-500 text-white font-bold py-2 px-4 border border-blue-700 rounded w-[300px]'
+            >
               Terminar Compra
-            </button>
+            </Link>
           ) : (
+            // <button className='bg-blue-500 text-white font-bold py-2 px-4 border border-blue-700 rounded w-[300px]'>
+            //   Terminar Compra
+            // </button>
             <div className='flex justify-center'>
-              <ItemCount stock={stock} onAdd={onAdd} />
+              <ItemCount stock={stock} onAdd={onAdd} id={id} />
             </div>
           )}
         </div>
