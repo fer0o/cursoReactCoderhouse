@@ -1,7 +1,7 @@
 import CartItem from './CartItem/CartItem'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useCartContext } from '../../context/CartContext/CartContext'
+import { useCartContext } from '../context/CartContext'
 import { CartResume } from './CartResume/CartResume'
 
 const Cart = () => {
@@ -20,8 +20,12 @@ const Cart = () => {
       <div>
         {cart.length !== 0 && (
           <>
-            <h3>Parece que no hay productos en el carrito</h3>
-            <Link to='/'>Busquemos algunos</Link>
+            {cart.map(product => (
+              <CartItem key={product.id} product={product} />
+            ))}
+            <div>
+              <button onClick={deleteCart}>Limpiar carrito</button>
+            </div>
           </>
         )}
       </div>

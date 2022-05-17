@@ -18,10 +18,7 @@ const CartItem = ({ product }) => {
         <h4 className='text-uppercase'>{`$${product.precio *
           product.quantity}`}</h4>
         <p>{`$${product.precio} c/u`}</p>
-        <button
-          className='btn btn-danger'
-          onClick={() => deleteFromCart(product)}
-        >
+        <button onClick={() => deleteFromCart(product)}>
           Eliminar del Carrito
         </button>
       </div>

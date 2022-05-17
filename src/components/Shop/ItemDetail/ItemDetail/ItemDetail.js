@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ItemCount from '../../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 const ItemDetail = ({ product }) => {
   const { jersey, nombre, marca, precio, stock, id } = product
@@ -35,12 +36,15 @@ const ItemDetail = ({ product }) => {
             precio:<b> ${precio}</b> MXN
           </h4>
           {terminar ? (
-            <Link
-              to='/cart'
-              className='bg-blue-500 text-white font-bold py-2 px-4 border border-blue-700 rounded w-[300px]'
-            >
-              Terminar Compra
-            </Link>
+            <>
+              <Link
+                to='/cart'
+                className='bg-blue-500 text-white font-bold py-2 px-4 border border-blue-700 rounded w-[300px]'
+              >
+                Terminar Compra
+              </Link>
+              <button onClick={() => setTerminar(false)}> Agregar más</button>
+            </>
           ) : (
             // <button className='bg-blue-500 text-white font-bold py-2 px-4 border border-blue-700 rounded w-[300px]'>
             //   Terminar Compra
