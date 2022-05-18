@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Cart from './components/Cart/Cart'
 import AppContextProvider from './components/context/AppContext'
 import CartContextProvider from './components/context/CartContext'
 
@@ -30,6 +31,7 @@ function App () {
                 element={<ItemListContainer />}
               />
               <Route path='/item/:id' element={<ItemDetailContainer />} />
+              <Route path='/cart' element={<Cart />} />
             </Routes>
           </BrowserRouter>
         </CartContextProvider>

@@ -1,7 +1,10 @@
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom'
+import { useCartContext } from '../context/CartContext'
+import Cart from '../Cart/Cart'
 
 const Navbar = () => {
+  const { cart } = useCartContext()
   return (
     <div className='navbar bg-emerald-700'>
       {/* comentado por ahora que no es responsive */}
@@ -38,7 +41,7 @@ const Navbar = () => {
           </li> */}
         </ul>
         {/* comentado por ahora que no es responsive */}
-        <CartWidget />
+        {cart.length === 0 ? <></> : <CartWidget />}
       </div>
     </div>
   )
