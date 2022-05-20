@@ -29,16 +29,11 @@ const Navbar = () => {
               Hombre
             </a>
           </li>
-          {/* <li>
-            <a href='/' className='text-xl'>
+          <li>
+            <a href='/category/mujer' className='text-xl'>
               Mujer
             </a>
           </li>
-          <li>
-            <a href='/' className='text-xl'>
-              Niños
-            </a>
-          </li> */}
         </ul>
         {/* comentado por ahora que no es responsive */}
         {cart.length === 0 ? <></> : <CartWidget />}
