@@ -21,6 +21,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     getItem()
   }, [itemId])
+
   const getItem = () => {
     const getItemPromise = new Promise((res, rej) => {
       const db = getFirestore()
