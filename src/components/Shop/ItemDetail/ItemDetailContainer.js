@@ -29,6 +29,7 @@ const ItemDetailContainer = () => {
       const itemCollection = collection(db, 'items')
       getDocs(itemCollection).then(snapshot => {
         const items = snapshot.docs.map(doc => ({ ...doc.data() }))
+        console.log({ items })
         res(items)
       })
     })
@@ -40,7 +41,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      <ItemDetail product={product} key={product.id} />
+      <ItemDetail product={product} />
     </div>
   )
 }

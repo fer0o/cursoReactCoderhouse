@@ -3,8 +3,8 @@ import ItemCount from '../../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 
-const ItemDetail = ({ jersey, nombre, marca, precio, stock, id }) => {
-  //
+const ItemDetail = ({ product }) => {
+  const { jersey, nombre, marca, precio, stock, id } = product
   // estado interno que cambie el estado
   const [terminar, setTerminar] = useState(false)
   // agregar el contador
