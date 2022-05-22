@@ -1,6 +1,8 @@
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
+import HombresList from '../categories/HombresList'
+import MujeresList from '../categories/MujeresList'
 import Cart from '../Cart/Cart'
 
 const Navbar = () => {
@@ -25,14 +27,12 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href='/category/hombre' className='text-xl'>
-              Hombre
-            </a>
+            <a href='#' className='text-xl'></a>
+            <HombresList />
           </li>
           <li>
-            <a href='/category/mujer' className='text-xl'>
-              Mujer
-            </a>
+            <a href='/category/mujer' className='text-xl'></a>
+            <MujeresList />
           </li>
         </ul>
         {/* comentado por ahora que no es responsive */}

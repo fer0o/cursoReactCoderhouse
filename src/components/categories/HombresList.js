@@ -21,7 +21,7 @@ const HombresList = () => {
     <div>
       <ul>
         <li key='hombre'>
-          <Link to={`/itemListContainer/${'hombre'}`}>Todas</Link>
+          <Link to={`/itemListContainer/${'hombre'}`}>Hombres</Link>
         </li>
       </ul>
     </div>
