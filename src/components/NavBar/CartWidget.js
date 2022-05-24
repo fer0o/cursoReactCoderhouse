@@ -28,7 +28,7 @@ const CartWidget = () => {
         </div>
         {
           <div>
-            <Link to='/cart'>Ver Carrito</Link>
+            <Link to={`/cart`}>Ver Carrito</Link>
           </div>
         }
       </label>
