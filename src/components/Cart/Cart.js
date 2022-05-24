@@ -15,7 +15,7 @@ const Cart = () => {
   return (
     <div>
       <div>
-        <h1> Bienvenido al Carrito!</h1>
+        <h1 className='text-blue-600'> Bienvenido al Carrito!</h1>
       </div>
       <div>
         {cart.length !== 0 && (
