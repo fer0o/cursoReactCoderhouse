@@ -18,7 +18,7 @@ const Item = ({ nombre, precio, img, marca, id }) => {
         </h4>
         <Link
           className='px-4 py-2 mt-auto w-[100px] bg-blue-500 text-white font-bold border '
-          to={`/item/${id}`}
+          to={`/itemDetail/${id}`}
         >
           Ver Mas
         </Link>

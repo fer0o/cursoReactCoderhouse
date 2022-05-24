@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { getItem } from '../../data/equiposData'
+// import { getItem } from '../../data/equiposData'
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 
 const AppContext = createContext()
 
@@ -9,8 +10,13 @@ const AppContextProvider = ({ children }) => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    getItem().then(resp => setProducts(resp))
-  })
+    const db = getFirestore()
+    const itemCollection = collection(db, 'items')
+    getDocs(itemCollection).then(snapshot => {
+      setProducts(snapshot.docs.map(doc => ({ ...doc.data() })))
+    })
+    console.log({ products })
+  }, [])
   return (
     <AppContext.Provider value={{ products }}>{children}</AppContext.Provider>
   )
