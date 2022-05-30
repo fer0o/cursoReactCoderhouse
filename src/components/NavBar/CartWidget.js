@@ -6,11 +6,15 @@ const CartWidget = () => {
 
   const { cart } = useCartContext()
   let itemsCartWidg = 0
-  for (let i = 0; i < cart.length; i++) {
-    const cant = cart[i].quantity
+  // for (let i = 0; i < cart.length; i++) {
+  //   const cant = cart[i].quantity
 
+  //   itemsCartWidg = itemsCartWidg + cant
+  // }
+  cart.forEach(element => {
+    const cant = element.quantity
     itemsCartWidg = itemsCartWidg + cant
-  }
+  })
   return (
     <div>
       <label className='btn btn-ghost btn-circle'>
