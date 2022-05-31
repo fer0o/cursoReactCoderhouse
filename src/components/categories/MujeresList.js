@@ -10,11 +10,12 @@ import {
 
 const MujeresList = () => {
   const [products, setProducts] = useState([])
+
   useEffect(() => {
     const db = getFirestore()
     const q = query(collection(db, 'items'), where('category', '==', 'mujer'))
     getDocs(q).then(snapshot => {
-      setProducts(snapshot.docs.map(doc => ({ ...doc.data() })))
+      setProducts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
     })
   }, [])
   return (

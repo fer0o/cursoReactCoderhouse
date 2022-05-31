@@ -5,7 +5,7 @@ const task = new Promise(resp => {
 
   const itemCollection = collection(db, 'items')
   getDocs(itemCollection).then(snapshot => {
-    const items = snapshot.docs.map(doc => ({ ...doc.data() }))
+    const items = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
     resp(items)
   })
 })

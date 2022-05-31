@@ -36,12 +36,12 @@ const ItemListContainer = () => {
       )
       getDocs(q).then(snapshot => {
         console.log(snapshot)
-        setProducts(snapshot.docs.map(doc => ({ ...doc.data() })))
+        setProducts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
       })
     } else {
       getDocs(itemCollection).then(snapshot => {
         console.log({ snapshot })
-        setProducts(snapshot.docs.map(doc => ({ ...doc.data() })))
+        setProducts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
       })
     }
   }, [categoryId])

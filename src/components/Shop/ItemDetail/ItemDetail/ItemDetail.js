@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 
 const ItemDetail = ({ product }) => {
-  const { jersey, nombre, marca, precio, stock, id } = product
+  const { jersey, nombre, marca, precio, stock, id, category } = product
   // estado interno que cambie el estado
   const [terminar, setTerminar] = useState(false)
   // agregar el contador

@@ -29,7 +29,7 @@ const CartContextProvider = ({ children }) => {
     producto.quantity = cantidad
     setCart([...newCart, producto])
   }
-
+  // borrar del carrito
   const deleteFromCart = producto => {
     const newCart = [...cart]
 
