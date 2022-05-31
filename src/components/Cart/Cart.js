@@ -3,19 +3,66 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
 import { CartResume } from './CartResume/CartResume'
-import { addDoc, collection, getFirestore } from 'firebase/firestore'
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  getFirestore,
+  Timestamp,
+  updateDoc
+} from 'firebase/firestore'
+
+const initialBuyer = {
+  name: '',
+  phone: '',
+  email: ''
+}
 
 const Cart = () => {
+  // para orden
+  const [buyer, setBuyer] = useState(initialBuyer)
   const { cart, deleteCart } = useCartContext()
-
-  // for (let i = 0; i < cart.length; i++) {
-  //   const precio = cart[i].precio * cart[i].quantity
-  //   total += precio
-  // }
   let total = 0
   cart.forEach(productoEnCarrito => {
+    //console.log({ productoEnCarrito })
     total += productoEnCarrito.precio * productoEnCarrito.quantity
   })
+  const order = {
+    buyer,
+    item: cart,
+    total
+  }
+  const db = getFirestore()
+  // generar orden
+  const generateOrder = async order => {
+    const newOrder = addDoc(collection(db, 'orders'), {
+      ...order,
+      date: Timestamp.fromDate(new Date())
+    })
+    return newOrder
+  }
+
+  const handleSubmit = async e => {
+    e.preventDefault()
+    if (buyer.name !== '' && buyer.phone !== '' && buyer.email !== '') {
+      generateOrder(order)
+        .then(res => {
+          alert('Orden generada con exito')
+        })
+        .then(() => deleteCart())
+        .catch(err => alert('Error al generar la orden'))
+    } else {
+      alert('Faltan datos')
+    }
+  }
+  const handleChange = e => {
+    setBuyer({
+      ...buyer,
+      [e.target.name]: e.target.value
+    })
+  }
 
   return (
     <div>
@@ -70,6 +117,43 @@ const Cart = () => {
                 </div>
               </>
             )}
+          </div>
+          <div className='border-2 border-black drop-shadow rounded-lg container flex flex-col mt-2 p-2'>
+            <p className='flex justify-center border-b-2 border-black'>
+              Agrega tus datos para completar la orden
+            </p>
+            <div>
+              <form
+                onSubmit={handleSubmit}
+                onChange={handleChange}
+                className='flex flex-col justify-center container mt-2 mb-3'
+              >
+                <input
+                  className='form-control mb-2'
+                  type='text'
+                  placeholder='Nombre:'
+                  name='name'
+                  value={order.name}
+                />
+                <input
+                  className='form-control mb-2'
+                  type='number'
+                  placeholder='Telefono:'
+                  name='phone'
+                  value={order.phone}
+                />
+                <input
+                  className='form-control mb-2'
+                  type='email'
+                  placeholder='Email:'
+                  name='email'
+                  value={order.email}
+                />
+                <button className='bg-blue-500 text-white font-bold py-2 px-4 border border-black rounded w-[300px] '>
+                  Enviar orden
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

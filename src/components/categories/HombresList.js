@@ -14,7 +14,7 @@ const HombresList = () => {
     const db = getFirestore()
     const q = query(collection(db, 'items'), where('category', '==', 'hombre'))
     getDocs(q).then(snapshot => {
-      setProducts(snapshot.docs.map(doc => ({ ...doc.data() })))
+      setProducts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
     })
   }, [])
   return (

@@ -13,7 +13,7 @@ const CartItem = ({ product }) => {
       <div className='flex flex-col  p-16 text-xl border-2'>
         <div className='mb-8'>
           <h2 className='text-2xl font-bold mb-8'>
-            Jersey del equipo {` ${product.nombre} `} del año 2022 de la marca
+            Jersey del equipo {` ${product.nombre} `} del año 2022 de la marca{' '}
             {product.marca}
           </h2>
         </div>

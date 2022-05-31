@@ -38,16 +38,16 @@ const ItemCount = ({ stock, onAdd, id }) => {
       </div>
       <div className='grid grid-cols-3 m-8 border-2'>
         <button
-          className='flex justify-start text-2xl font-bold'
+          className='flex justify-start text-2xl font-bold m-2'
           onClick={resProduct}
         >
           -
         </button>
-        <label className='flex justify-center text-2xl font-bold'>
+        <label className='flex justify-center text-2xl font-bold m-2'>
           {count}
         </label>
         <button
-          className='flex justify-end text-2xl font-bold'
+          className='flex justify-end text-2xl font-bold m-2 '
           onClick={addProduct}
         >
           +

@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
 
       const itemCollection = collection(db, 'items')
       getDocs(itemCollection).then(snapshot => {
-        const items = snapshot.docs.map(doc => ({ ...doc.data() }))
+        const items = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
         console.log({ items })
         res(items)
       })
