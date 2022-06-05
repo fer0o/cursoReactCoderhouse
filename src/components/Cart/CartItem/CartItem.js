@@ -26,6 +26,10 @@ const CartItem = ({ product }) => {
             <b>{` ${product.category} `}</b>
           </h2>
           <h2 className='mb-4'>
+            Modelo:
+            <b>{` ${product.modelo} `}</b>
+          </h2>
+          <h2 className='mb-4'>
             Cantidad:
             <b>{` ${product.quantity} unidades`}</b>
           </h2>

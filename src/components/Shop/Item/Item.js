@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Item = ({ nombre, precio, img, marca, id }) => {
+const Item = ({ nombre, precio, img, marca, id, modelo }) => {
   return (
     <div className='border-2 p-4 grid grid-cols-2 drop-shadow rounded-lg'>
       <div className='flex justify-center'>
@@ -9,7 +9,7 @@ const Item = ({ nombre, precio, img, marca, id }) => {
       </div>
       <div className='m-4 flex flex-col'>
         <h4> País: {nombre} </h4>
-        <h4> Año: 2022 </h4>
+        <h4> Año: {modelo} </h4>
         <h4>
           Marca: <b>{marca}</b>
         </h4>
