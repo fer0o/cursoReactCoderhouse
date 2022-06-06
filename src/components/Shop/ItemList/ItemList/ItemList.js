@@ -18,7 +18,7 @@ const ItemList = ({ products }) => {
               marca={product.marca}
               img={product.jersey}
               modelo={product.modelo}
-              categoria={product.categoria}
+              category={product.category}
               key={product.id}
             />
           ))}
