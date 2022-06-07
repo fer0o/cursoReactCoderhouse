@@ -49,7 +49,7 @@ const Cart = () => {
     if (buyer.name !== '' && buyer.phone !== '' && buyer.email !== '') {
       generateOrder(order)
         .then(res => {
-          alert('Orden generada con exito')
+          alert('Orden generada con exito, tu orden es la numero: ' + res.id)
         })
         .then(() => deleteCart())
         .catch(err => alert('Error al generar la orden'))
@@ -79,7 +79,7 @@ const Cart = () => {
               ))}
               <div className='flex justify-center m-4'>
                 <button
-                  className='bg-red-700 text-white font-bold py-2 px-4 border border-black rounded w-[300px] '
+                  className='bg-red-700 text-white font-bold py-2 px-4 border border-black rounded w-96 '
                   onClick={deleteCart}
                 >
                   Limpiar carrito
@@ -100,16 +100,16 @@ const Cart = () => {
             {cart.length !== 0 && (
               <>
                 <div className='flex flex-col'>
-                  <h2 className='text-2xl font-bold flex justify-center mb-8'>
+                  <h2 className='text-lg lg:text-2xl font-bold flex justify-center mb-8'>
                     Resumen Carrito
                   </h2>
                   {cart.map(prod => (
-                    <div className='flex justify-end border-b-2 border-black drop-shadow  text-4xl p-4'>
+                    <div className='flex justify-end border-b-2 border-black drop-shadow text-xl lg:text-4xl p-4'>
                       <CartResume key={prod.id} prod={prod} />
                     </div>
                   ))}
                   <div className='flex justify-center'>
-                    <h3 className='text-4xl m-4'>
+                    <h3 className='text-xl lg:text-4xl m-4'>
                       Total a pagar:
                       <b> ${total}</b>
                     </h3>
@@ -119,7 +119,7 @@ const Cart = () => {
             )}
           </div>
           <div className='border-2 border-black drop-shadow rounded-lg container flex flex-col mt-2 p-2'>
-            <p className='flex justify-center border-b-2 border-black'>
+            <p className='flex justify-center border-b-2 border-black  text-sm'>
               Agrega tus datos para completar la orden
             </p>
             <div>
@@ -149,7 +149,7 @@ const Cart = () => {
                   name='email'
                   value={order.email}
                 />
-                <button className='bg-blue-500 text-white font-bold py-2 px-4 border border-black rounded w-[300px] '>
+                <button className='bg-blue-500 text-white lg:font-bold py-2 lg:px-4 border border-black rounded w-full  '>
                   Enviar orden
                 </button>
               </form>

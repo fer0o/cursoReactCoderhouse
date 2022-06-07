@@ -27,11 +27,9 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href='#' className='text-xl'></a>
             <HombresList />
           </li>
           <li>
-            <a href='/category/mujer' className='text-xl'></a>
             <MujeresList />
           </li>
         </ul>
