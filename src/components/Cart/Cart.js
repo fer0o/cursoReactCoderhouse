@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
 import { CartResume } from './CartResume/CartResume'
+import Swal from 'sweetalert2'
 import {
   addDoc,
   collection,
@@ -49,12 +50,28 @@ const Cart = () => {
     if (buyer.name !== '' && buyer.phone !== '' && buyer.email !== '') {
       generateOrder(order)
         .then(res => {
-          alert('Orden generada con exito, tu orden es la numero: ' + res.id)
+          new Swal({
+            title: 'Tu orden fue enviada con éxito!',
+            text: `Tu n° de orden es: ${res.id}`,
+            icon: 'success',
+            button: 'Ok'
+          })
         })
         .then(() => deleteCart())
-        .catch(err => alert('Error al generar la orden'))
+        .catch(
+          err =>
+            new Swal(
+              `Hubo un error al generar la orden`,
+              'Hubo un error al generar la orden, Intente nuevamente'
+            )
+        )
     } else {
-      alert('Faltan datos')
+      new Swal({
+        title: 'Hubo  un error al llenar tus datos',
+        text: 'Faltan datos, Por favor revisa el formulario',
+        icon: 'error',
+        button: 'Ok'
+      })
     }
   }
   const handleChange = e => {

@@ -22,6 +22,13 @@ const HombresList = () => {
       <ul>
         <li key='hombre'>
           <Link to={`/itemListContainer/${'hombre'}`}>Hombres</Link>
+          {/* {products.map(l => (
+            <li key={l.id}>
+              <Link to={`itemDetail/${l.id}`} className=''>
+                {l.marca}
+              </Link>
+            </li>
+          ))} */}
         </li>
       </ul>
     </div>
