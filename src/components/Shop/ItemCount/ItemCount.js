@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useAppContext } from '../../context/AppContext'
 import { useCartContext } from '../../context/CartContext'
+import Swal from 'sweetalert2'
 
 const ItemCount = ({ stock, onAdd, id }) => {
   const [count, setCount] = useState(0)
@@ -21,7 +22,12 @@ const ItemCount = ({ stock, onAdd, id }) => {
   const handdleClick = (id, cantidad) => {
     const findProduct = products.find(producto => producto.id === id)
     if (!findProduct) {
-      alert('Error en la base de datos')
+      new Swal({
+        title: 'Hubo un error en tus datos',
+        text: 'El producto no pudo ser añadido,Intente nuevamente',
+        icon: 'error',
+        button: 'Ok'
+      })
       return
     }
     addToCart(findProduct, cantidad)

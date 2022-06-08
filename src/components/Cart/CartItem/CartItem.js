@@ -11,10 +11,10 @@ const CartItem = ({ product }) => {
       </div>
       {/* detalles sin css */}
       <div className='flex flex-col  p-16 text-xl border-2'>
-        <div className='mb-8'>
-          <h2 className='text-2xl font-bold mb-8'>
-            Jersey del equipo {` ${product.nombre} `} del año 2022 de la marca{' '}
-            {product.marca}
+        <div className='lg:mb-8'>
+          <h2 className='text-base lg:text-2xl font-bold '>
+            Jersey del equipo {` ${product.nombre} `} del año
+            {` ${product.modelo} `} de la marca {product.marca}
           </h2>
         </div>
         <div className='p-4 m-4'>
@@ -26,23 +26,27 @@ const CartItem = ({ product }) => {
             <b>{` ${product.category} `}</b>
           </h2>
           <h2 className='mb-4'>
+            Modelo:
+            <b>{` ${product.modelo} `}</b>
+          </h2>
+          <h2 className='mb-4'>
             Cantidad:
             <b>{` ${product.quantity} unidades`}</b>
           </h2>
 
-          <h2 className='text-2xl'>
+          <h2 className='text xl lg:text 2xl'>
             Total:$
-            <b className='text 2xl text-red-500'>
+            <b className='text xl lg:text 2xl text-red-500'>
               {`${product.precio * product.quantity}`} MXN
             </b>
           </h2>
-          <button
-            className='bg-red-700 text-white font-bold py-2 px-4 border border-black rounded w-[300px] mt-16'
-            onClick={() => deleteFromCart(product)}
-          >
-            Eliminar del Carrito
-          </button>
         </div>
+        <button
+          className='bg-red-700 text-white lg:font-bold lg:py-2 px-4 border border-black rounded w-full mt-8 '
+          onClick={() => deleteFromCart(product)}
+        >
+          Eliminar del Carrito
+        </button>
       </div>
     </div>
   )

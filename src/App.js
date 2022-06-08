@@ -3,6 +3,7 @@ import './App.css'
 import Cart from './components/Cart/Cart'
 import AppContextProvider from './components/context/AppContext'
 import CartContextProvider from './components/context/CartContext'
+import Footer from './components/footer/Footer'
 
 import Navbar from './components/NavBar/Navbar'
 import ItemDetailContainer from './components/Shop/ItemDetail/ItemDetailContainer'
@@ -15,9 +16,6 @@ import ItemListContainer from './components/Shop/ItemList/ItemListContainer'
 // import Saludo from './components/Saludo'
 
 function App () {
-  // const onAdd = qty => {
-  //   alert(`Has agregado ${qty} de Items al carrito de compra`)
-  // }
   return (
     <div>
       <AppContextProvider>
@@ -36,6 +34,7 @@ function App () {
               ></Route>
               <Route path='/cart' element={<Cart />} />
             </Routes>
+            <Footer />
           </BrowserRouter>
         </CartContextProvider>
       </AppContextProvider>

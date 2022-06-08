@@ -241,7 +241,7 @@ export const productos = [
     nombre: 'Marruecos',
     continente: 'Africa',
     jersey:
-      'https://footsoccerpro.co/wp-content/uploads/2020/09/MAILLOT-MAROC-DOMICILE-2020-2021-1-2-768x768.jpg',
+      'https://footsoccerpro.co/wp-c  ontent/uploads/2020/09/MAILLOT-MAROC-DOMICILE-2020-2021-1-2-768x768.jpg',
     marca: 'Puma',
     precio: 1000,
     stock: 10,
