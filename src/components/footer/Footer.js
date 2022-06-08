@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         <div>
           <p className='font-bold'>
-            Tienda Mundialito <br />
+            Mundialito Shop <br />
             Guadalajara, Jalisco, México
           </p>
           <p>Copyright © 2022 - All right reserved</p>

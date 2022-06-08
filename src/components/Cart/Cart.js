@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
 import { CartResume } from './CartResume/CartResume'
 import Swal from 'sweetalert2'
+import { FaSadCry } from 'react-icons/fa'
 import {
   addDoc,
   collection,
@@ -105,9 +106,18 @@ const Cart = () => {
             </div>
           )}
           {cart.length === 0 && (
-            <div>
-              <h2> Pareece que no hay productos en el carritos</h2>
-              <Link to='/'>Regresar a la pagina principal</Link>
+            <div className='flex flex-col'>
+              <h2 className='flex justify-center text-xl font-bold '>
+                Parece que no hay productos en el carrito
+                <FaSadCry className='ml-4' size={30} />
+              </h2>
+
+              <Link
+                className='flex justify-center border border-black rounded w-full p-xl-4 p-2 bg-blue-500 text-white font-bold mt-4'
+                to='/'
+              >
+                Regresar a la pagina principal
+              </Link>
             </div>
           )}
         </div>
