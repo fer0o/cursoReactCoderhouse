@@ -46,6 +46,14 @@ const Cart = () => {
     return newOrder
   }
 
+  // actualizar stock
+  // const updateStock = async (itemId, quantity) => {
+  //   const item = await getDoc(doc(db, 'items', itemId))
+  //   await updateDoc(doc(db, 'items', itemId), {
+  //     stock: item.data().stock - quantity
+  //   })
+  // }
+
   const handleSubmit = async e => {
     e.preventDefault()
     if (buyer.name !== '' && buyer.phone !== '' && buyer.email !== '') {
@@ -58,6 +66,7 @@ const Cart = () => {
             button: 'Ok'
           })
         })
+        // .then(() => cart.forEach(item => updateStock(item.id, item.quantity)))
         .then(() => deleteCart())
         .catch(
           err =>

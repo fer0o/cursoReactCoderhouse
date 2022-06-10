@@ -10,8 +10,9 @@ import {
   query
 } from 'firebase/firestore'
 
-const ItemListContainer = () => {
+const ItemListContainer = props => {
   //const [category, setCategory] = useState()
+  const { greetings } = props
   const { categoryId } = useParams()
   const [products, setProducts] = useState([])
 
@@ -49,6 +50,7 @@ const ItemListContainer = () => {
   return (
     <div>
       <div>
+        <div>{greetings}</div>
         <ItemList products={products} />
       </div>
     </div>
