@@ -1,5 +1,4 @@
 import React from 'react'
-import Countdown from 'react-countdown'
 
 const Hero = () => {
   const urlImage =
@@ -16,11 +15,10 @@ const Hero = () => {
             Copa Mundial de la FIFA Catar 2022
           </h1>
           <div className='mt-8'>
-            <h2 className='ml-1 lg:text-2xl font-bold'>Días Horas Minutos</h2>
-            <Countdown
-              className='text-2xl font-bold'
-              date={Date.now() + 14173200000}
-            />
+            <h2 className='ml-1 lg:text-2xl font-bold'>
+              Lunes, 21 de noviembre de 2022
+            </h2>
+            <h2 className='ml-1 lg:text-2xl font-bold'>13:00 hrs Hora Local</h2>
           </div>
         </div>
       </div>
