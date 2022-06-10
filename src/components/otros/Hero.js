@@ -22,9 +22,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <h1 className='block text-center mt-4 lg:text-4xl text-2xl font-bold p-4'>
-        Bienvenido a la tienda de Jerseys del mundial Qatar 2022
-      </h1>
     </div>
   )
 }

@@ -26,7 +26,7 @@ const ItemDetail = ({ product }) => {
       </div>
       <div className='container lg:grid grid-cols-2 gap-2 mx-auto border-2 m-4'>
         <div className='border-2'>
-          <img className='w-full h-auto p-8' src={jersey} />
+          <img className='w-full h-auto  p-8' src={jersey} />
         </div>
         <div className='flex flex-col justify-center p-16 border-2'>
           <h2 className='text-xl p-2'>

@@ -94,7 +94,9 @@ const Cart = () => {
   return (
     <div>
       <div className='flex justify-center p-8'>
-        <h1 className='text-2xl font-bold'> Bienvenido al Carrito!</h1>
+        <h1 className='lg:text-4xl text-2xl font-bold'>
+          Bienvenido al Carrito!
+        </h1>
       </div>
       {/* container */}
       <div className=' grid grid-cols-6 gap-1 p-4'>

@@ -36,24 +36,25 @@ const ItemCount = ({ stock, onAdd, id }) => {
 
   return (
     <div>
-      <div className='flex justify-center border-2 w-60 ml-8'>
+      <div className='flex justify-center border-2 w-60 ml-8 '>
         <span>
           stock:
-          <label className='font-bold m-2'>{stock}</label>
+          <label className='font-bold m-4 '>{stock}</label>
         </span>
       </div>
-      <div className='grid grid-cols-3 m-8 border-2'>
+      <h2 className='flex justify-center mt-8'>Agregar jersey al carrito</h2>
+      <div className='grid grid-cols-3 m-4 p-2'>
         <button
-          className='flex justify-start text-2xl font-bold m-2'
+          className='flex justify-center text-4xl font-bold  border-2 border-black rounded w-full p-2 hover:bg-black hover:text-white'
           onClick={resProduct}
         >
           -
         </button>
-        <label className='flex justify-center text-2xl font-bold m-2'>
+        <label className='flex justify-center text-2xl font-bold m-4'>
           {count}
         </label>
         <button
-          className='flex justify-end text-2xl font-bold m-2 '
+          className='flex justify-center text-4xl font-bold  border-2 border-black rounded w-full p-2 hover:bg-black hover:text-white '
           onClick={addProduct}
         >
           +

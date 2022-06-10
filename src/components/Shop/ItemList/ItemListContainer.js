@@ -50,7 +50,9 @@ const ItemListContainer = props => {
   return (
     <div>
       <div>
-        <div>{greetings}</div>
+        <div className='block text-center  lg:text-4xl text-2xl font-bold'>
+          {greetings}
+        </div>
         <ItemList products={products} />
       </div>
     </div>
