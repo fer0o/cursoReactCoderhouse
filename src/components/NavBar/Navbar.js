@@ -8,7 +8,7 @@ import Cart from '../Cart/Cart'
 const Navbar = () => {
   const { cart } = useCartContext()
   return (
-    <div className='navbar flex justify-between z-10 border-b-2 border-black bg-emerald-700 text-2xl font-bold'>
+    <div className='navbar flex justify-between z-10 border-b-2 border-black bg-emerald-700 text-2xl font-bold p-4'>
       <div className='flex-1'>
         <Link
           className='btn btn-ghost normal-case hover:bg-transparent text-2xl font-bold'
