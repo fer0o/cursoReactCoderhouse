@@ -4,7 +4,7 @@ import { useCartContext } from '../../context/CartContext'
 import Swal from 'sweetalert2'
 
 const ItemCount = ({ stock, onAdd, id }) => {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(1)
 
   const { addToCart } = useCartContext()
   const { products } = useAppContext()
@@ -15,7 +15,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
     }
   }
   const resProduct = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1)
     }
   }
