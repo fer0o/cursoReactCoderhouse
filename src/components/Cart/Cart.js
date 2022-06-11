@@ -99,8 +99,8 @@ const Cart = () => {
         </h1>
       </div>
       {/* container */}
-      <div className=' grid grid-cols-6 gap-1 p-4'>
-        <div className='col-span-4'>
+      <div className=' grid lg:grid-cols-6 grid-cols-2 gap-1 p-4'>
+        <div className='col-span-4 lg:order-1 order-2'>
           {cart.length !== 0 && (
             <div>
               {cart.map(product => (
@@ -133,7 +133,8 @@ const Cart = () => {
           )}
         </div>
         {/* segundo div */}
-        <div className='col-span-2 container  gap-2 mx-auto m-4 p-4'>
+        {/* order */}
+        <div className='col-span-2 container  gap-2 mx-auto m-4 p-4 lg:order-2 order-1'>
           <div className='border-2 border-black drop-shadow rounded-lg container'>
             {cart.length !== 0 && (
               <>

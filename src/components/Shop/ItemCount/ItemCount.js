@@ -36,13 +36,15 @@ const ItemCount = ({ stock, onAdd, id }) => {
 
   return (
     <div>
-      <div className='flex justify-center border-2 w-60 ml-8 '>
+      {/* <div className='flex justify-center border-2 w-60 ml-8 '>
         <span>
           stock:
           <label className='font-bold m-4 '>{stock}</label>
         </span>
-      </div>
-      <h2 className='flex justify-center mt-8'>Agregar jersey al carrito</h2>
+      </div> */}
+      <h2 className='flex justify-center mt-8 font-bold'>
+        Agregar jersey al carrito
+      </h2>
       <div className='grid grid-cols-3 m-4 p-2'>
         <button
           className='flex justify-center text-4xl font-bold  border-2 border-black rounded w-full p-2 hover:bg-black hover:text-white'

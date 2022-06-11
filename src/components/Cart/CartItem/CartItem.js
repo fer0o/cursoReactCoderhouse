@@ -4,20 +4,19 @@ import { useCartContext } from '../../context/CartContext'
 const CartItem = ({ product }) => {
   const { deleteFromCart } = useCartContext()
   return (
-    <div className='container lg:grid grid-cols-2 gap-1 mx-auto border-2 drop-shadow rounded-lg  m-4'>
+    <div className='container lg:grid lg:grid-cols-2 gap-1 mx-auto border-2 drop-shadow rounded-lg '>
       <div className='border-2'>
-        {/* imagen */}
+        {/* imagen primer grid */}
         <img className='w-full h-auto p-16' src={product.jersey} />
       </div>
-      {/* detalles sin css */}
-      <div className='flex flex-col  p-16 text-xl border-2'>
-        <div className='lg:mb-8'>
-          <h2 className='text-base lg:text-2xl font-bold '>
+      {/* segundo grid */}
+      <div className=' p-16 text-xl border-2'>
+        <div className='lg:mb-8 block'>
+          <h2 className='text-2xl font-bold '>
             Jersey del equipo {` ${product.nombre} `} del año
             {` ${product.modelo} `} de la marca {product.marca}
           </h2>
-        </div>
-        <div className='p-4 m-4'>
+
           <h2 className='mb-4'>
             Precio individual: <b>{`$${product.precio} MXN c/u`}</b>
           </h2>
@@ -40,13 +39,14 @@ const CartItem = ({ product }) => {
               {`${product.precio * product.quantity}`} MXN
             </b>
           </h2>
+
+          <button
+            className='block mt-8  bg-red-700 text-white font-bold lg:py-2 lg:px-4 border border-black rounded text-base w-full p-4'
+            onClick={() => deleteFromCart(product)}
+          >
+            Eliminar del Carrito
+          </button>
         </div>
-        <button
-          className='bg-red-700 text-white lg:font-bold lg:py-2 px-4 border border-black rounded w-full mt-8 '
-          onClick={() => deleteFromCart(product)}
-        >
-          Eliminar del Carrito
-        </button>
       </div>
     </div>
   )
