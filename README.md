@@ -1,4 +1,4 @@
-# **Tienda Mundialito Shop** :shopping_cart:
+# **Tienda Mundialito Shop** :soccer: :shopping_cart:
 ## *Proyecto de React JS Coderhouse*
 
 ___
@@ -13,4 +13,26 @@ Las categorías y los productos se cargan desde una base de datos creada en Fire
 ___
 ## :large_blue_circle: Frameworks y librerías utilizadas:
 - ### React.js
-- ### Tailwind CSS, Daisy UI, Sweet:
+- ### Tailwind CSS, Daisy UI, SweetAlert2:
+- ### React Icons:
+    - Para íconos utilizados en el footer del sitio 
+- ### SweetAlert2:
+    - Para los mensajes de alerta que aparecen en pantalla
+
+___
+## :large_blue_circle: Creación e Instalación:
+Este proyecto se inició con [Create React App]
+
+**Deberás tener instalado Node.js en tu sistema**
+Para instalar las dependencias, en el directorio del proyecto ejecute: 
+```
+$ npm install
+```
+Para poder ejecutar el proyecto en ambiente local ejecutar: 
+```
+$ npm start
+```
+Para visualizar el proyecto forma local es necesario estar en:
+```
+http://localhost:3000/
+```
