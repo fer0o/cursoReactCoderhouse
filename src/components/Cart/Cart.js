@@ -124,7 +124,7 @@ const Cart = () => {
               </h2>
 
               <Link
-                className='flex justify-center border border-black rounded w-full p-xl-4 p-2 bg-blue-500 text-white font-bold mt-4'
+                className='flex justify-center border border-black rounded w-full  p-2 bg-blue-500 text-white font-bold mt-4'
                 to='/'
               >
                 Regresar a la pagina principal
@@ -157,8 +157,8 @@ const Cart = () => {
               </>
             )}
           </div>
-          <div className='border-2 border-black drop-shadow rounded-lg container flex flex-col mt-2 p-2'>
-            <p className='flex justify-center border-b-2 border-black  text-sm'>
+          <div className='border-2 border-black drop-shadow rounded-lg container flex flex-col mt-2  p-2'>
+            <p className='flex justify-center border-b-2 mb-2 border-black  text-sm'>
               Agrega tus datos para completar la orden
             </p>
             <div>
@@ -168,27 +168,27 @@ const Cart = () => {
                 className='flex flex-col justify-center container mt-2 mb-3'
               >
                 <input
-                  className='form-control mb-2'
+                  className='form-control mb-4 p-2 drop-shadow'
                   type='text'
                   placeholder='Nombre:'
                   name='name'
                   value={order.name}
                 />
                 <input
-                  className='form-control mb-2'
+                  className='form-control mb-4 p-2 drop-shadow'
                   type='number'
                   placeholder='Telefono:'
                   name='phone'
                   value={order.phone}
                 />
                 <input
-                  className='form-control mb-2'
+                  className='form-control mb-4 p-2 drop-shadow'
                   type='email'
                   placeholder='Email:'
                   name='email'
                   value={order.email}
                 />
-                <button className='bg-blue-500 text-white lg:font-bold py-2 lg:px-4 border border-black rounded w-full  '>
+                <button className='bg-blue-500 text-white lg:font-bold py-2 lg:px-4 border border-black rounded w-full drop-shadow  '>
                   Enviar orden
                 </button>
               </form>
