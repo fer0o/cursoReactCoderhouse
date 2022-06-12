@@ -13,7 +13,7 @@ Las categorías y los productos se cargan desde una base de datos creada en Fire
 ___
 ## :large_blue_circle: Frameworks y librerías utilizadas:
 - ### React.js
-- ### Tailwind CSS, Daisy UI, SweetAlert2:
+- ### Tailwind CSS, Daisy UI:
 - ### React Icons:
     - Para íconos utilizados en el footer del sitio 
 - ### SweetAlert2:
