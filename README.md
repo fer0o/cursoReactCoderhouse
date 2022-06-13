@@ -15,7 +15,7 @@ ___
 - ### React.js
 - ### Tailwind CSS, Daisy UI:
 - ### React Icons:
-    - Para íconos utilizados en el footer del sitio 
+    - Para íconos utilizados en el footer del sitio. 
 - ### SweetAlert2:
     - Para los mensajes de alerta que aparecen en pantalla
 
