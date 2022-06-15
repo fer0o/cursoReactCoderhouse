@@ -11,6 +11,8 @@ El proyecto se basa en un e-commerce que posee las siguientes características:
 Las categorías y los productos se cargan desde una base de datos creada en Firebase
 
 ___
+![gif del sitio](public/mundialito.gif)
+___
 ## :large_blue_circle: Frameworks y librerías utilizadas:
 - ### React.js
 - ### Tailwind CSS, Daisy UI:
